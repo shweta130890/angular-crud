@@ -1,0 +1,17 @@
+
+
+<nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+  <a class="navbar-brand" href="#">TrakUser </a>
+  <ul class="navbar-nav">
+    <li class="nav-item" *ngIf="!isLoggedIn" (click)="showLogin()">
+      <span class="nav-link" [ngClass]="{'active': activatedRoute=='LOGIN'}">Login</span>
+    </li>
+    <li class="nav-item" *ngIf="!isLoggedIn" (click)="showSignup()">
+      <span class="nav-link" [ngClass]="{'active': activatedRoute=='SIGNUP'}">Signup</span>
+    </li> 
+    <li class="nav-item" *ngIf="isLoggedIn" (click)="showUsers()">
+      <span class="nav-link" [ngClass]="{'active': activatedRoute=='SHOWUSER'}">List existing users</span>
+    </li> 
+  </ul>
+</nav> 
+

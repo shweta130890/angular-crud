@@ -1,0 +1,29 @@
+<div class="container">
+
+    <h2>Users</h2>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Active</th> 
+          <th>Action</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let user_i = index">
+          <td>{{user_i+1}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.email}}</td>
+          <td><span *ngIf="user.role==1"> User</span> <span *ngIf="user.role!=1">Admin</span></td> 
+          <td><span *ngIf="user.isActive"> Active</span> <span *ngIf="!user.isActive">In Active</span></td> 
+          <td><span *ngIf="user.isActive"><button type="button" (click)="deactivate(user)" class="btn btn-warning">Deactivate</button></span> <span *ngIf="!user.isActive"><button type="button" (click)="activate(user)" class="btn btn-success">Activate</button></span></td> 
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

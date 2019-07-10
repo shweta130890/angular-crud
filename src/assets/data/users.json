@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "username": "shweta",
+        "email": "shweta@mailinator.com",
+        "password": "pass000",
+        "isActive": false,
+        "role": 1
+    },
+    {
+        "id": 2,
+        "username": "shweta1",
+        "email": "shweta1@mailinator.com",
+        "password": "pass111",
+        "isActive": true,
+        "role": 1
+    },
+    {
+        "id": 3,
+        "username": "shweta2",
+        "email": "shweta2@mailinator.com",
+        "password": "pass222",
+        "isActive": true,
+        "role": 10
+    }
+]
